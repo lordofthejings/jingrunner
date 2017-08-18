@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jingru.li</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Font Awesome 4 -->
+    <link rel="stylesheet" href='css/font-awesome.css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container-fluid d-flex h-100 flex-column">
+        <!-- I want this container to stretch to the height of the parent -->
+        <div class="row">
+        </div>
+        <div class="row bg-faded fill d-flex justify-content-start">
+            <!-- I want this row height to filled the remaining height -->
+            <div class="col-md-6 greenbg">
+                <div class="container d-flex h-100">
+                    <div class="row justify-content-center align-self-center padleftright">
+
+                        <!-- Main body Text -->
+                        <h2>Get ready.</h2>
+                        <h2 class="padtop">Everything you've ever wanted will be here very soon.</h2>
+
+                        <!-- Email form -->
+                        <div class="input-group padtop">
+                            <input type="text" class="form-control" placeholder="Email address">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-envelope"></i></span></button>
+                            </span>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modalheader" id="exampleModalLabel">Submit Email</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Did you really think this would actually work and save your email just to alert you in a few hours?
+                                            <br>
+                                            <br> You probably tried to use someone else's email anyway.... you dog.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Get this out of my face</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Display the countdown timer in an element -->
+                        <h1 id="demo" class="padtop"></h1>
+                        <script>
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Aug 18, 2017 18:30:00").getTime();
+
+                            // Update the count down every 1 second
+                            var x = setInterval(function () {
+
+                                // Get todays date and time
+                                var now = new Date().getTime();
+
+                                // Find the distance between now an the count down date
+                                var distance = countDownDate - now;
+
+                                // Time calculations for days, hours, minutes and seconds
+                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                // Display the result in the element with id="demo"
+                                document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                                // If the count down is finished, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("demo").innerHTML = "EXPIRED";
+                                }
+                            }, 1000);
+                        </script>
+                        <div class="footer">
+                            © 2017 - Made with <i class="fa fa-heart" aria-hidden="true"></i> by JR. and SR.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 blackbg">
+                <img src="img/launchingsoon3.png">
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts loaded here-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+    <!--Custom Scripts -->
+    <script src="js/scripts.js"></script>
+
+    <!--modal-->
+    <script>
+        $(document).ready(function () {
+            $("#MyModal").modal();
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').focus();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

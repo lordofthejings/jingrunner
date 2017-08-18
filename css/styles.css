@@ -1,0 +1,48 @@
+html,body{
+    height:100%;
+}
+
+.greenbg {   
+    background: #84C318;
+}
+.blackbg {
+    background: #20222B;  	
+}
+.fill {
+    flex:1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: floralwhite;
+      
+}
+
+.padleftright{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.padtop{
+    padding-top: 25px;
+}
+
+.modalheader{
+    color: #20222B;
+}
+
+.footer{
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-content: center;
+    color: floralwhite;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100%;
